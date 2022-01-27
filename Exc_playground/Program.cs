@@ -30,9 +30,14 @@ for (int i = 0; i < table.GetLength(0); i++)
 {
     Console.WriteLine($"{table[i,0]} {table[i, 1]} {table[i, 2]} {table[i, 3]} {table[i, 4]} {table[i, 5]} {table[i, 6]} {table[i, 7]} {table[i, 8]} {table[i, 9]}");
 }
-*/
 
 var yearlyTransport = new YearlyTransport();
 yearlyTransport.DisplayTransportPlan();
 
+var sumOfMinimum = new SumOfMinimum();
 
+Console.WriteLine(sumOfMinimum.GetSumOfMinimum());
+*/
+
+var EventsNDelegatesExample = new EventsAndDelegates();
+EventsNDelegatesExample.RunRegistration();
