@@ -37,7 +37,11 @@ yearlyTransport.DisplayTransportPlan();
 var sumOfMinimum = new SumOfMinimum();
 
 Console.WriteLine(sumOfMinimum.GetSumOfMinimum());
-*/
 
 var EventsNDelegatesExample = new EventsAndDelegates();
 EventsNDelegatesExample.RunRegistration();
+*/
+
+var spoonerizeString = new SpoonerizeString();
+// should return -> "bedding wells"
+Console.WriteLine(spoonerizeString.Spoonerize("wedding bells"));
