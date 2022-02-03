@@ -58,9 +58,24 @@ selSort.selectionSort(strings);
 foreach (int num in nums) Console.Write($"{num} ");
 Console.WriteLine();
 foreach (string str in strings) Console.Write($"{str} ");
-*/
 
 int[] nums = new int[] { 10, 23, 43, -12, 43, -43, 45, 13, 549 };
 var insertSort = new InsertionSort();
 insertSort.insertionSort(nums);
 foreach (int num in nums) Console.Write($"{num} ");
+
+int[] nums = new int[] { 10, 23, 43, -12, 43, -43, 45, 13, 549, -30 };
+int[] nums2 = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 10, 0 };
+var bubbleSort = new BubbleSort();
+bubbleSort.sort(nums2);
+foreach (int num in nums2) Console.Write($"{num} ");
+
+
+int[] nums = new int[] { 10, 23, 43, -12, 43, -43, 45, 13, 549, -30 };
+var quicksort = new QuickSort();
+quicksort.sort(nums);
+foreach (int num in nums) Console.WriteLine(num);
+*/
+
+var bookPrinter = new BookPrinter();
+bookPrinter.Read();
