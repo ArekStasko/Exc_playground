@@ -25,5 +25,10 @@ namespace Exc_playground
             return minSum;
         }
 
+
+        public static int[] revert(int[] nums)
+        {
+            return nums.Reverse().ToArray();
+        }
     }
 }

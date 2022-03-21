@@ -76,6 +76,50 @@ var quicksort = new QuickSort();
 quicksort.sort(nums);
 foreach (int num in nums) Console.WriteLine(num);
 */
+/*
+// SHOULD RETURN "abigailtheta" FOR 2
+string[] arr = new String[] {"zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"};
 
-var bookPrinter = new BookPrinter();
-bookPrinter.Read();
+//SHOULD RETURN "ixoyx3452zzzzzzzzzzzz" FOR 3
+string[] arr1 = new string[] { "it", "wkppv", "ixoyx", "3452", "zzzzzzzzzzzz" };
+
+var ConString = new ConsecutiveStrings();
+Console.WriteLine(ConString.findString(arr1, 3));
+*/
+
+// SHOULD RETURN 30
+/*
+int result = ModifiedSum.GetModifiedSum(new int[] { 1, 2, 3}, 3);
+Console.WriteLine(result);
+
+
+int[] nums = new int[] { 1, 22, 3, 4, 5, 6, 7, 8, 9, 10 };
+int[] result = SumOfMinimum.revert(nums);
+foreach (int num in result) Console.WriteLine(num);
+
+var data = new Dictionary<Guid, string>();
+var productLocation = new ProductLocation(data);
+var a = productLocation.AddProduct("Magazyn A");
+var b = productLocation.AddProduct("Magazyn B");
+var c = productLocation.AddProduct("Magazyn C");
+var d = productLocation.AddProduct("Magazyn D");
+
+productLocation.DeleteProduct(c);
+productLocation.DeleteProduct(d);
+productLocation.PrintProducts();
+Console.WriteLine(productLocation.GetProductLocation(a));
+Console.WriteLine(productLocation.GetProductLocation(new Guid()));
+*/
+var data = new Dictionary<Guid, User>() { };
+var userDetails = new UserDetails(data);
+
+var a = userDetails.AddUser(new User("Tom", "Fox", "tom.fox@mkc.com"));
+var b = userDetails.AddUser(new User("John", "Smith", "tom.fox@mkc.com"));
+var c = userDetails.AddUser(new User("Jake", "Clark", "tom.fox@mkc.com"));
+var d = userDetails.AddUser(new User("Zack", "Lorren", "tom.fox@mkc.com"));
+
+userDetails.DeleteUser(d);
+userDetails.DeleteUser(c);
+userDetails.PrintUsers();
+Console.WriteLine(userDetails.GetUser(a));
+Console.WriteLine(userDetails.GetUser(new Guid()));
