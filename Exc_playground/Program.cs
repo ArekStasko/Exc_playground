@@ -109,7 +109,7 @@ productLocation.DeleteProduct(d);
 productLocation.PrintProducts();
 Console.WriteLine(productLocation.GetProductLocation(a));
 Console.WriteLine(productLocation.GetProductLocation(new Guid()));
-*/
+
 var data = new Dictionary<Guid, User>() { };
 var userDetails = new UserDetails(data);
 
@@ -123,3 +123,16 @@ userDetails.DeleteUser(c);
 userDetails.PrintUsers();
 Console.WriteLine(userDetails.GetUser(a));
 Console.WriteLine(userDetails.GetUser(new Guid()));
+
+var sortedDictionary = new SortedDictionary();
+sortedDictionary.AddItem("Sidzina", "Jakas wiocha");
+sortedDictionary.AddItem("Skotniki", "Wiocha obok sidziny");
+sortedDictionary.AddItem("Belchatow", "Chyba jest cos takiego");
+sortedDictionary.AddItem("Ruczaj", "Pato wiocha");
+sortedDictionary.AddItem("Austynów", "Wymyslilem to");
+sortedDictionary.AddItem("Kraków", "Metropolia <3");
+sortedDictionary.PrintItems();
+*/
+
+var apiDemo = new API_demo();
+apiDemo.Call();
