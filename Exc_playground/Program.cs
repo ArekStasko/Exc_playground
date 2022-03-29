@@ -132,7 +132,24 @@ sortedDictionary.AddItem("Ruczaj", "Pato wiocha");
 sortedDictionary.AddItem("Austynów", "Wymyslilem to");
 sortedDictionary.AddItem("Kraków", "Metropolia <3");
 sortedDictionary.PrintItems();
-*/
 
 var apiDemo = new API_demo();
 apiDemo.Call();
+*/
+
+var tree = new BasicTree<int>();
+tree.Root = new TreeNode<int>();
+tree.Root.Data = 100;
+var node1 = new TreeNode<int>();
+var node2 = new TreeNode<int>();
+var node3 = new TreeNode<int>();
+tree.Root.Children = new List<TreeNode<int>> { node1, node2, node3 };
+node1.Parent = tree.Root;
+node2.Parent = tree.Root;
+node3.Parent = tree.Root;
+node1.Data = 50;
+node2.Data = 1;
+node3.Data = 150;
+var node3Children = new TreeNode<int>();
+node3.Children = new List<TreeNode<int>>() { node3Children };
+node3Children.Parent = node3;
