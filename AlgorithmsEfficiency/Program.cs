@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            var controllers = new Controllers();
-            controllers.InitializeArrays(10);
+            var presenter = new Presenters();
+            presenter.PrintStatistics();
         }
     }
 }
