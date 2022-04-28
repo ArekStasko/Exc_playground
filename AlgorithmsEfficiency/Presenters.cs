@@ -9,10 +9,10 @@ namespace AlgorithmsEfficiency
 {
     internal class Presenters
     {
-        private int InsertionSort { get; set; }
-        private int MergeSort { get; set; }
-        private int QuickSortClassical { get; set; }
-        private int QuickSort { get; set; }
+        private List<double> InsertionSort { get; set; } = new List<double> { };
+        private List<double> MergeSort { get; set; } = new List<double> { };
+        private List<double> QuickSortClassical { get; set; } = new List<double> { };
+        private List<double> QuickSort { get; set; } = new List<double> { };
 
 
         public void PrintStatistics()
@@ -28,16 +28,27 @@ namespace AlgorithmsEfficiency
 
             var AlgoImplementations = new AlgorithmsImplenentations();
 
-            var sw = new Stopwatch();
-
-            sw.Start();
             foreach (var arr in controllers.RandomArrays)
-            {                
+            {
+                var sw = new Stopwatch();
+                sw.Start();
                 AlgoImplementations.InsertionSort(arr);
+                sw.Stop();
+                InsertionSort.Add(Math.Round(sw.Elapsed.TotalMilliseconds, 8));
+                sw.Restart();
+                AlgoImplementations.QuickSort(arr);
+                sw.Stop();
+                QuickSort.Add(Math.Round(sw.Elapsed.TotalMilliseconds, 8));
+                sw.Restart();
+                AlgoImplementations.MergeSort(arr, 0, arr.Length-1);
+                sw.Stop();
+                MergeSort.Add(Math.Round(sw.Elapsed.TotalMilliseconds, 8));
+                sw.Restart();
+                Array.Sort(arr);
+                sw.Stop();
+                QuickSortClassical.Add(Math.Round(sw.Elapsed.TotalMilliseconds, 8));
             }
-            sw.Stop();
 
-            Console.WriteLine($"InsertionSort time : {sw.Elapsed.Milliseconds}");
         }
 
         private void PrintEffects()
