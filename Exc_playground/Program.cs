@@ -136,7 +136,6 @@ sortedDictionary.PrintItems();
 var apiDemo = new API_demo();
 apiDemo.Call();
 
-*/
 
 var tree = new BasicTree<int>();
 tree.Root = new TreeNode<int>();
@@ -155,5 +154,10 @@ var node3Children = new TreeNode<int>();
 node3.Children = new List<TreeNode<int>>() { node3Children };
 node3Children.Parent = node3;
 
+*/
 
+var playground = new Playground();
+string[] test = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k" };
+playground.Revert(test);
+Console.WriteLine(String.Join("", test));
 
