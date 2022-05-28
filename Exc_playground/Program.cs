@@ -2,6 +2,7 @@
 using Exc_playground.YearlyTransport;
 using Exc_playground.SortingAlgorithms;
 using Exc_playground.MyImplementations;
+using Exc_playground.EmployeeStructure;
 
 /*
 Console.WriteLine("I will guess your number !");
@@ -161,7 +162,6 @@ string[] test = new string[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
 playground.Revert(test);
 Console.WriteLine(String.Join("", test));
 
-*/
 
 
 //Utilities.Print<char>(Utilities.CreateTreeOfChars());
@@ -171,3 +171,31 @@ var collection = new MyCollection();
 
 foreach (var item in collection)
     Console.Write(item);
+
+*/
+
+Person person = new Person(1, "Carl", "CEO");
+Person person1 = new Person(2, "Carl1", "head");
+Person person2 = new Person(3, "Carl2", "dev");
+Person person3 = new Person(4, "Carl3", "dev");
+Person person4 = new Person(5, "Carl4", "head");
+Person person5 = new Person(6, "Carl5", "dev");
+Person person6 = new Person(7, "Carl6", "Senior");
+Person person7 = new Person(8, "Carl7", "dev");
+Person person8 = new Person(9, "Carl8", "dev");
+
+var company = new CompanyNode(person);
+var department1 = new CompanyNode(person1);
+department1.nodes.Add(new CompanyNode(person2));
+department1.nodes.Add(new CompanyNode(person3));
+var department2 = new CompanyNode(person4);
+department2.nodes.Add(new CompanyNode(person5));
+var department3 = new CompanyNode(person6);
+department3.nodes.Add(new CompanyNode(person7));
+department3.nodes.Add(new CompanyNode(person8));
+
+company.nodes.Add(department1);
+company.nodes.Add(department2);
+company.nodes.Add(department3);
+
+company.PrintNodes(company);
