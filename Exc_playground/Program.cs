@@ -1,6 +1,7 @@
 ﻿using Exc_playground;
 using Exc_playground.YearlyTransport;
 using Exc_playground.SortingAlgorithms;
+using Exc_playground.MyImplementations;
 
 /*
 Console.WriteLine("I will guess your number !");
@@ -164,4 +165,9 @@ Console.WriteLine(String.Join("", test));
 
 
 //Utilities.Print<char>(Utilities.CreateTreeOfChars());
-Utilities.RunTest();
+//Utilities.RunTest();
+
+var collection = new MyCollection();
+
+foreach (var item in collection)
+    Console.Write(item);
